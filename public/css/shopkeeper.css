@@ -1,0 +1,42 @@
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 80px;
+}
+
+#our {
+	background-color: #4E5276;
+	border-radius: 25px;
+	padding: 1px 1px;
+}
+
+.gallery {
+	background: url('/images/dot.jpeg');
+	margin: 0;
+	background-size:1500px;
+	height: 800px;
+}
+.text-card{
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+.image-card{
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.card{
+	margin-left: 10px;
+}
+
+#shopbut{
+	width: 110px;
+	color: #1ab8ea;
+	font-weight: bold;
+	background-color: white;
+}

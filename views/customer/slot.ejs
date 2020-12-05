@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book Your Slot</title>
+    <!-- Bootstrap cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet"> -->
+    <!-- Favicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/css/Landingpage.css">
+
+    <!-- Modal -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body style="background:url('/images/dot.jpeg')">
+    <section style="padding: 210px 570px;">
+        <div class="card" style="width: 400px; border: 5px solid #2E3F61; border-radius: 15px;">
+            <div class="card-body">
+                <h5 class="class-title" style="color: #2E3F61; font-family: 'Oswald', sans-serif; font-size: 35px"><img
+                        src="/images/logo eshika.png"
+                        style="width: 15%; height: 15%; padding-top: 0px; padding-bottom: 18px;"> Find it, Book it, Buy it.</h5>
+                <form action="/customer/slot" method="post">
+                    <p class="card-text">
+                        <p>Pick your shop</p>
+                    <select class="form-control" id="sel1" name="shop">
+                        <% users.forEach(function(user){ %>
+                        <option value="<%=user.name%>" id="shop"><%=user.name%></option>
+                        <% }) %>
+                    </select>
+                    </p>
+                    </p>
+                    <div class="row d-flex justify-content-center" style="padding-bottom: 25px;">
+                        <div style="padding-right: 20px;">
+                            <a class="btn btn-success" href="/customer/dashboard"
+                                style="padding:15px 30px; font-size: 20px; ">Back</a>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg" style="padding:15px 20px 5px 20px;"
+                            id="myBtn">Confirm</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <p>This slot is full, please select another one!</p>
+        </div>
+
+    </div>
+    <!-- Js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

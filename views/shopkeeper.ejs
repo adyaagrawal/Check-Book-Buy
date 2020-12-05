@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopkeeper Dashboard</title>
+
+	<!-- Bootstrap cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet"> -->
+	<!-- Favicons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- stylesheet -->
+	<link rel="stylesheet" href="/css/shopkeeper_dashboard.css">
+
+</head>
+<body>
+	<!-- Nav -->
+	<nav class="navbar navbar-expand-lg navbar-dark " style="line-height: 50px; position: fixed; width: 100%; background-color: #2E3F61; z-index: 10">
+	  <a class="navbar-brand" style="color: white; font-family: 'Oswald', sans-serif; font-size: 35px" ><img src="/images/logo eshika.png" style="width: 15%; height: 15%; padding-top: 0px; padding-bottom: 18px;"> Find it, Book it, Buy it.</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup text-light">
+	    <div class="navbar-nav ml-auto" style="padding-right: 25px;">
+	      <button type="button" class="btn mx-2" id="our">
+	      <a class="nav-item nav-link active" href="/" style="font-family: 'Oswald', sans-serif; font-size: 20px;">  Home  <span class="sr-only">(current)</span></a>
+	      </button>
+	      <button type="button" class="btn mx-2" id="our">
+	      <a class="nav-item nav-link" style="font-family: 'Oswald', sans-serif; font-size: 20px"><%= currentUser.username  %></a>
+	  	  </button>
+	      <button type="button" class="btn mx-2" id="our">
+	      <a class="nav-item nav-link " href="/logout" style="font-family: 'Oswald', sans-serif; font-size: 20px">Log Out</a>
+	  	  </button>
+	    </div>
+	  </div>
+	</nav>
+
+<!-- Cards -->
+<section class="gallery">
+		<div class="container jump">
+			<div class="row">
+				<div class="col-lg-6 mb-3">
+					<div class="card border-our" style="width:400px; align:center;">
+						<img class="card-img-top mx-auto" src="/images/hi.png">
+						<div class="card-body" style="text-align: center;">
+							<h5 class="card-title" style="color: #2E3F61; font-family: Roboto; font-weight: bold; font-size: 35px;">Add Items</h5>
+							<p class="card-text">Adding new items that are not existing.</p>
+							<a href="/posts/new" class="btn btn-card btn-lg">Let's Go</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6 mb-3">
+						
+					<div class="card border-our" style="width:400px;">
+						<img class="card-img-top mx-auto" src="/images/he.png">
+						<div class="card-body" style="text-align: center;">
+							<h5 class="card-title" style="color: #2E3F61; font-family: Roboto; font-weight: bold; font-size: 35px;">Update Items</h5>
+							<p class="card-text">Increasing or decreasing stock of items.</p>
+							<a href="/posts" class="btn btn-card btn-lg">Let's Go</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+
+
+	<!-- Js -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

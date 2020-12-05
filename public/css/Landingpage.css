@@ -1,0 +1,80 @@
+.gallery {
+	background: url('/images/dot.jpeg');
+	margin: 0;
+	background-size:1500px;
+	height: 800px;
+}
+.jump{
+	align:center;
+	padding-top: 200px;
+	opacity: 0.8;
+	color: #2E3F61;
+	font-family: Roboto;
+	font-weight: 900;
+	font-size: 25px;
+	padding-left: 115px;
+}
+
+#About-contact {
+	background-color: #2E3F61;
+}
+
+.card-img-top {
+	width: 80%;
+}
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 80px;
+}
+#our {
+	background-color: #4E5276;
+	border-radius: 25px;
+	padding: 1px 1px;
+}
+
+.btn-card {
+	background-color: #2E3F61;
+	color: white;
+	font-weight: bold;
+}
+
+.btn-card:hover{
+	color: white;
+}
+
+.text-card{
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+.image-card{
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.image-card2{
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+.text-card2{
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.border-our{
+	border: 5px solid #2E3F61;
+	border-radius: 15px;
+}
+
+

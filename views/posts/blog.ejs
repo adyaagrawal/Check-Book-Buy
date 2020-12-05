@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add items</title>
+    <!-- Bootstrap cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet"> -->
+    <!-- Favicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/css/Landingpage.css">
+
+    <!-- Modal -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 300px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 20%;
+            height: 40%;
+            font-size: 35px;
+            text-align: center;
+            border: 5px solid #2E3F61;
+            border-radius: 15px;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body style="background:url('/images/dot.jpeg')">
+    <section style="padding: 210px 570px;">
+        <div class="card" style="width: 400px; border: 5px solid #2E3F61; border-radius: 15px;">
+            <div class="card-body">
+                <h5 class="class-title" style="color: #2E3F61; font-family: 'Oswald', sans-serif; font-size: 35px"><img
+                    src="/images/logo eshika.png"
+                    style="width: 15%; height: 15%; padding-top: 0px; padding-bottom: 18px;"> Find it, Book it, Buy it.</h5>
+                <% posts.forEach(function(post){ %>
+                    <!-- <% if(currentUser.username == post.author.username){ %> -->
+                    <div class="row no-gutters img-thumbnail" style="margin: 20px; padding: 20px">
+                        <div class="col-12 col-sm-6 col-md-8">
+                            <h4 class=" font-weight-bold">Item : <%= post.item %></h4>
+                            <h5 class="about">quantity: <%= post.quantity %> </h5>
+                            <div style="display: flex; justify-content: center;">
+                                <p  style="margin-right: 30px;">
+                                    <a href="/posts/<%= post._id %>/edit" class="btn btn-warning">Update</a>
+                                </p>
+                                <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+                                    <p style="margin-right: 30px;">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </p>
+                                </form>
+                               
+                            </div>
+                            <hr>
+                            
+                        </div>
+                    </div>
+                    <% } %>
+                    <% }) %>
+                    <div class="form-group" style="display: flex; justify-content:center; margin-top: 10px;">
+                        <a class="btn btn-success" href="/shopkeeper/dashboard"
+                            style="padding:15px 30px; font-size: 20px; ">Back</a>
+                            <a class="btn btn-success" href="/posts/new"
+                            style="padding:15px 30px; font-size: 20px; margin: 0 10px; ">Add More</a>
+
+            </div>
+        </div>
+    </section>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Please enter a valid number!</p>
+        </div>
+
+    </div>
+    <!-- Js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
+
